@@ -4,7 +4,9 @@ services:
 
   web:
     build: .
+    command: bundle exec jekyll s -H 0.0.0.0 --force_polling --livereload
     ports:
       - "4000:4000"
+      - "35729:35729"
     volumes:
       - .:/usr/src/site
