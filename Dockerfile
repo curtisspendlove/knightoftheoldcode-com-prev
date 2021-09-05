@@ -4,7 +4,8 @@ LABEL maintainer="curtis.spendlove@knightoftheoldcode.com"
 
 RUN apt-get update -yqq && \
     apt-get install -yqq --no-install-recommends \
-    nodejs
+    nodejs \
+    npm
 
 COPY Gemfile* /usr/src/site/
 WORKDIR /usr/src/site
